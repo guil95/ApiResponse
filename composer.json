@@ -1,0 +1,21 @@
+{
+    "name": "guil95/api-response",
+    "description": "Lib for responses api",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Guilherme Rodrigues",
+            "email": "guilhermerodriguestb@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ApiResponse\\": "src/"
+        }
+    }
+}
