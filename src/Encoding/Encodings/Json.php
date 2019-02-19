@@ -1,6 +1,6 @@
 <?php
 
-namespace ApiResponse\Encoding\Econdigs;
+namespace ApiResponse\Encoding\Encodings;
 
 class Json
 {

@@ -2,7 +2,7 @@
 
 namespace ApiResponse\Encoding;
 
-use ApiResponse\Encoding\Econdigs\Json;
+use ApiResponse\Encoding\Encodings\Json;
 
 class EncodingResponse
 {

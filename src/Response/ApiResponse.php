@@ -8,7 +8,7 @@ use ApiResponse\Status\StatusResponse;
 class ApiResponse extends Response
 {
 
-    public static function json(array $data, int $status, string $message)
+    public static function json(array $data, int $status)
     {
 
         if (!in_array($status, self::HTTP_VALID_CODES)) {
@@ -17,7 +17,7 @@ class ApiResponse extends Response
 
         HeaderResponse::createHeader('json');
         StatusResponse::create($status);
-        return EncodingResponse::returnEncoding($data, 'json');
+        echo EncodingResponse::returnEncoding($data, 'json');
     }
 
 }
