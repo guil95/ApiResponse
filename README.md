@@ -19,7 +19,7 @@ class MyClass{
     //process save
     
     ApiResponse::json([
-      'data' => $myObject,
+      'data' => $dataResponse,
       'message' => 'Persist object!'
     ], ApiResponse::HTTP_CREATED);
   }
