@@ -1,6 +1,6 @@
 # ApiResponse
 
-Use for responses from your API
+Use for responses from your API, pass array and status code, get data encoding, header content type and http status code
 
 # How to install
 
