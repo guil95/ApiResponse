@@ -17,7 +17,7 @@ class MyClass{
   public function save()
   {
     //process save
-    // $dataResponse: can be, string, array or object
+    // $dataResponse: can be, string, array or object (show only public attributes)
     ApiResponse::json([
       'data' => $dataResponse,
       'message' => 'Persist object!'
