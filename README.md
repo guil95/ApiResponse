@@ -8,7 +8,7 @@ Use for responses from your API
 
 # How to use
 
-```
+```php
 namespace MyClass;
 
 use ApiResponse\Response\ApiResponse;
