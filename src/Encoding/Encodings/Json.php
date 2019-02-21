@@ -2,9 +2,14 @@
 
 namespace ApiResponse\Encoding\Encodings;
 
-class Json
+class Json implements EcondingInterface
 {
-    public static function create(array $data): string
+    /**
+     * @param array $data
+     * @param array|null $options
+     * @return string
+     */
+    public static function create(array $data, ?array $options): string
     {
         return json_encode($data);
     }

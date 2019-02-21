@@ -3,17 +3,27 @@
 namespace ApiResponse\Encoding;
 
 use ApiResponse\Encoding\Encodings\Json;
+use ApiResponse\Encoding\Encodings\Xml;
 
 class EncodingResponse
 {
-    public static function returnEncoding(array $data, string $type)
+    /**
+     * @param array $data
+     * @param string $type
+     * @param string|null $root
+     * @return string
+     */
+    public static function returnEncoding(array $data, string $type, ?string $root)
     {
         switch ($type){
             case 'json':
-                return Json::create($data);
+                return Json::create($data, null);
+                break;
+            case 'xml':
+                return Xml::create($data, $root);
                 break;
             default:
-                Json::create($data);
+                return Json::create($data, null);
                 break;
         }
     }
