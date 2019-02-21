@@ -31,7 +31,7 @@ class MyClass{
      * @param int $status
      * @param string|null $root
      */
-    ApiResponse::json([
+    ApiResponse::xml([
       'name' => 'Guilherme'
     ],ApiResponse::HTTP_CREATED,
     'root');
