@@ -17,11 +17,26 @@ class MyClass{
   public function save()
   {
     //process save
+    
+    //Return json
     // $dataResponse: can be, string, array or object (show only public attributes)
     ApiResponse::json([
       'data' => $dataResponse,
       'message' => 'Persist object!'
     ], ApiResponse::HTTP_CREATED);
+    
+    //Return xml
+    /**
+     * @param array $data
+     * @param int $status
+     * @param string|null $root
+     */
+    ApiResponse::json(
+    [
+      'name' => 'Guilherme'
+    ], 
+    ApiResponse::HTTP_CREATED,
+    'root');
   }
 }
 ```
