@@ -6,7 +6,7 @@ use ApiResponse\Header\Types\Xml;
 
 class HeaderResponse
 {
-    public static function createHeader(string $type)
+    public static function create(string $type)
     {
         switch ($type){
             case 'json':

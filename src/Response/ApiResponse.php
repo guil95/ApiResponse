@@ -14,7 +14,7 @@ class ApiResponse extends Response
             throw new \InvalidArgumentException(sprintf('The HTTP status code "%s" is not valid.', $status));
         }
 
-        HeaderResponse::createHeader($type);
+        HeaderResponse::create($type);
         StatusResponse::create($status);
         echo EncodingResponse::returnEncoding($data, $type, $root);
     }
