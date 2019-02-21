@@ -6,10 +6,10 @@ class Json implements EcondingInterface
 {
     /**
      * @param array $data
-     * @param array|null $options
+     * @param string|null $root
      * @return string
      */
-    public static function create(array $data, ?array $options): string
+    public static function create(array $data, ?string $root): string
     {
         return json_encode($data);
     }

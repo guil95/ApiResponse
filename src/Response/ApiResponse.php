@@ -8,7 +8,7 @@ use ApiResponse\Status\StatusResponse;
 class ApiResponse extends Response
 {
 
-    public function __construct(array $data, int $status, ?string $root, $type)
+    private function __construct(array $data, int $status, ?string $root, $type)
     {
         if (!in_array($status, self::HTTP_VALID_CODES)) {
             throw new \InvalidArgumentException(sprintf('The HTTP status code "%s" is not valid.', $status));
