@@ -1,0 +1,8 @@
+<phpunit bootstrap="vendor/autoload.php">
+    <testsuites>
+        <testsuite name="ApiResponse tests">
+            <directory>/tests/Encoding/Encodings/*Test.php</directory>
+            <directory>/tests/Response/*Test.php</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
