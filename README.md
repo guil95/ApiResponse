@@ -4,7 +4,9 @@ Use for responses from your API, pass array and status code, get data encoding, 
 
 # How to install
 
-`composer require guil95/api-response`
+```php 
+composer require guil95/api-response
+```
 
 # How to use
 
