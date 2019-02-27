@@ -1,7 +1,6 @@
 <?php
 namespace ApiResponse\Header;
 
-use ApiResponse\Header\Types\Csv;
 use ApiResponse\Header\Types\Json;
 use ApiResponse\Header\Types\Xml;
 
@@ -15,9 +14,6 @@ class HeaderResponse
                 break;
             case 'xml':
                 Xml::create();
-                break;
-            case 'csv':
-                Csv::create();
                 break;
             default :
                 Json::create();

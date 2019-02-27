@@ -39,16 +39,4 @@ class ApiResponse extends Response
         new self($data, $status, $root, 'xml');
     }
 
-    /**
-     * @param array $data
-     * @param int $status
-     */
-    public static function csv(array $data, int $status)
-    {
-        if(!isset($data[0])){
-            throw new \InvalidArgumentException('Data array is invalid');
-        }
-        new self($data, $status, null, 'csv');
-    }
-
 }
