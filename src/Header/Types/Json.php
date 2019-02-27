@@ -2,7 +2,7 @@
 
 namespace ApiResponse\Header\Types;
 
-class Json
+class Json implements TypeInterface
 {
     public static function create()
     {

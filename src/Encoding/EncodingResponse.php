@@ -2,6 +2,7 @@
 
 namespace ApiResponse\Encoding;
 
+use ApiResponse\Encoding\Encodings\Csv;
 use ApiResponse\Encoding\Encodings\Json;
 use ApiResponse\Encoding\Encodings\Xml;
 
@@ -21,6 +22,9 @@ class EncodingResponse
                 break;
             case 'xml':
                 return Xml::create($data, $root);
+                break;
+            case 'csv':
+                Csv::create($data);
                 break;
             default:
                 return Json::create($data, null);

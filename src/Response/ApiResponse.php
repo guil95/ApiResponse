@@ -4,6 +4,7 @@ namespace ApiResponse\Response;
 use ApiResponse\Encoding\EncodingResponse;
 use ApiResponse\Header\HeaderResponse;
 use ApiResponse\Status\StatusResponse;
+use http\Exception\InvalidArgumentException;
 
 class ApiResponse extends Response
 {
@@ -36,6 +37,18 @@ class ApiResponse extends Response
     public static function xml(array $data, int $status, ?string $root)
     {
         new self($data, $status, $root, 'xml');
+    }
+
+    /**
+     * @param array $data
+     * @param int $status
+     */
+    public static function csv(array $data, int $status)
+    {
+        if(!isset($data[0])){
+            throw new \InvalidArgumentException('Data array is invalid');
+        }
+        new self($data, $status, null, 'csv');
     }
 
 }
