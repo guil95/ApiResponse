@@ -11,7 +11,7 @@ composer require guil95/api-response
 # How to use
 
 ```php
-namespace MyClass;
+namespace MyNamespace;
 
 use ApiResponse\Response\ApiResponse;
 
