@@ -34,7 +34,7 @@ class ApiResponse extends Response
      * @param int $status
      * @param string|null $root
      */
-    public static function xml(array $data, int $status, ?string $root)
+    public static function xml(array $data, int $status, ?string $root = null)
     {
         new self($data, $status, $root, 'xml');
     }
