@@ -34,7 +34,8 @@ class MyClass{
      * @param string|null $root
      */
     ApiResponse::xml([
-      'name' => 'Guilherme'
+      'data' => $dataResponse,
+      'message' => 'Persist object!'
     ],ApiResponse::HTTP_CREATED,
     'root');
   }
